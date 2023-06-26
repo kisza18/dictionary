@@ -11,8 +11,10 @@ const Header = () => {
   };
 
   return (
-    <div className="flex items-center justify-between w-full mt-10 px-5">
-      <img src={logoImg} alt="logo" />
+    <div className="flex items-center justify-between w-full mt-14 px-5">
+      <a href="">
+        <img src={logoImg} alt="logo" />
+      </a>
       <div className="flex items-center">
         <div className="select pr-5 h-14 flex items-center relative">
           <div
@@ -24,11 +26,11 @@ const Header = () => {
           </div>
 
           {showOption && (
-            <div className="absolute top-16 -left-10 shadow-2xl p-5 rounded-lg w-36">
+            <div className="absolute z-50 bg-white top-16 -left-10 shadow-2xl p-5 rounded-lg w-36">
               <ul>
-                <li className="mb-2">Open Sans</li>
-                <li className="mb-2">Josefin Sans</li>
-                <li>Roboto Mono</li>
+                <li className="mb-3 text-sm">Open Sans</li>
+                <li className="mb-3 text-sm">Josefin Sans</li>
+                <li className="text-sm">Roboto Mono</li>
               </ul>
             </div>
           )}

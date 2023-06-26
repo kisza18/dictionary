@@ -7,9 +7,6 @@ body {
   /* font-family: "Josefin Sans", sans-serif;
   font-family: "Roboto Mono", monospace; */
 }
-/* .app-cont {
-  min-width: 737px;
-} */
 .select {
   border-right: 1px solid rgb(223, 223, 223);
 }
@@ -50,7 +47,7 @@ body {
 }
 
 input:checked + .slider {
-  background-color: #d2a2f6;
+  background-color: #d946ef;
 }
 
 input:focus + .slider {
@@ -69,4 +66,15 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+li {
+  list-style: none;
+}
+ul li::before {
+  content: "\2022";
+  color: #d946ef;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
