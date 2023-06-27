@@ -15,9 +15,11 @@ const Result = (props) => {
 
   return (
     <div className="px-5 py-9">
-      <div className="result-header flex items-center justify-between">
+      <div className="result-header flex items-start justify-between">
         <div>
-          <h1 className="text-4xl sm:text-6xl font-bold">{results[0].word}</h1>
+          <h1 className="text-4xl sm:text-6xl font-bold dark:text-white">
+            {results[0].word}
+          </h1>
           <p className="text-2xl mt-4 text-fuchsia-500 font-thin">
             {results[0].phonetic}
           </p>
@@ -26,7 +28,7 @@ const Result = (props) => {
           <img src={playImg} alt="playbutton" onClick={playAudio} />
         </button>
       </div>
-      <div className="noun mt-8">
+      <div className="noun mt-8 dark:text-white">
         <div className="title flex items-center">
           <h1 className="text-2xl font-bold italic mr-7">noun</h1>
           <div className="line border-b-2 border-gray-100 w-full"></div>
@@ -53,7 +55,7 @@ const Result = (props) => {
         </div>
       </div>
       {results[0].meanings[1] && (
-        <div className="verb mt-8">
+        <div className="verb mt-8 dark:text-white">
           <div className="title flex items-center">
             <h1 className="text-2xl font-bold italic mr-7">verb</h1>
             <div className="line border-b-2 border-gray-100 w-full"></div>
@@ -71,7 +73,7 @@ const Result = (props) => {
         </div>
       )}
       <div className="line border-b-2 border-gray-100 w-full mt-4"></div>
-      <div className="source mt-4">
+      <div className="source mt-4 dark:text-white">
         <h1 className="text-gray-500 mb-1">Source</h1>
         <a
           className="flex items-center gap-3"

@@ -7,21 +7,23 @@ Header;
 
 function App() {
   const [data, setData] = useState({});
-  const [run, setRun] = useState(false);
+  const [run, setRun] = useState(true);
 
   const receiveData = (d) => {
     setData(d);
   };
 
-  const receiveRun = (r) => {
-    setRun(r);
+  const handleError = (err) => {
+    setRun(err);
   };
 
   return (
-    <div className="app-cont max-w-3xl mx-auto">
-      <Header />
-      <Search datas={receiveData} run={receiveRun} />
-      {run && <Result result={data} />}
+    <div className="main-container dark:bg-black">
+      <div className="app-cont max-w-3xl mx-auto">
+        <Header />
+        <Search datas={receiveData} error={handleError} />
+        {!run && <Result result={data} />}
+      </div>
     </div>
   );
 }
